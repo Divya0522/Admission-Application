@@ -1,0 +1,97 @@
+#signUpContainer {
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.9;
+    border: 2px solid black;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url('../assets/collegephoto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+
+label {
+    font-size: 18px;
+    padding: 0px;
+}
+
+input[type="text"],
+input[type="pswd"] {
+    margin: 10px 0;
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+}
+
+#forget {
+    padding-left: 20%;
+    text-decoration: underline;
+}
+
+
+#create {
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    padding: 13px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(85, 83, 83);
+    display: block;
+    margin: auto;
+}
+
+#create:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+#signin {
+    display: block;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#signin:hover {
+    color: white;
+    background-color: black;
+}
+
+#signUpMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.error {
+    font-size: 18px;
+    color: red;
+}

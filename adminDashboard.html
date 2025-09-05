@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/adminDashboard.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="./assets/vvitlogo.png" alt="VVIT Logo">
+        <a href="#" class="logo-text">VVIT Admissions</a>
+      </div>
+      
+      <nav class="main-nav">
+        <a href="#" class="nav-link active" id="applicationsLink">Applications</a>
+        <a href="#" class="nav-link" id="settingsLink">Settings</a>
+      </nav>
+      
+      <div class="user-profile">
+        <img src="https://ui-avatars.com/api/?name=Admin&background=random" alt="Profile" class="profile-pic">
+        <span class="profile-name" id="profileDisplay">Admin</span>
+        <button class="logout-btn" id="logout">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1 class="dashboard-title">Admission Applications</h1>
+    </div>
+    
+    <div class="deadline-controls">
+      <h3>Application Deadline</h3>
+      <form class="deadline-form" id="deadlineForm">
+        <input type="date" class="deadline-input" id="deadlineInput" required>
+        <button type="submit" class="deadline-btn">Update Deadline</button>
+      </form>
+      <div class="current-deadline" id="currentDeadline"></div>
+    </div>
+    
+    <div class="admin-controls">
+      <input type="text" class="search-box" placeholder="Search applications..." id="searchInput">
+      <select class="filter-select" id="statusFilter">
+        <option value="all">All Statuses</option>
+        <option value="Submitted">Submitted</option>
+        <option value="Approved">Approved</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+    </div>
+    
+    <div class="table-responsive">
+      <table class="applications-table">
+        <thead>
+          <tr>
+            <th>Application ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="applicationsTableBody">
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+ 
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeDetailModal">&times;</button>
+      <div id="applicationDetailContent">
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/adminDashboard.js">
+   
+  </script>
+</body>
+</html>

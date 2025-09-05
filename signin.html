@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/signin.css">
+</head>
+
+<body>
+    <div id="signinMain">
+        <div id="signInContainer">
+            <h1 style="text-align: center;">Sign in</h1>
+            <h2 style="text-align: center;">Welcome back!</h2>
+            <div id="emailContainer">
+                <label for="email">Email Address</label><br>
+                <input type="text" id="email" placeholder="Enter Email Address">
+            </div><br>
+            <div id="passwordContainer">
+                <label for="password">Enter Password</label><br>
+                <input type="pswd" id="password" placeholder="Enter Password"><br>
+            </div>
+            <input type="checkbox" id="rememberMe" value="Remember Me"><label for="rememberMe">Remember Me</label>
+            &nbsp;&nbsp;&nbsp;
+            <a href="#container" id="forget">Forgot Password?</a>
+            <button id="signin" onclick="signInValidation(event)">Sign In</button>
+            <p style="font-size: 18px; text-align: center;">-------------- Don't have an account ---------------</p>
+            <button id="create" onclick="window.location.replace('./signup.html')">Create account</button>
+        </div>
+
+    </div>
+    <div>
+        <div id="container">
+            <div id="forgotPassword">
+                <div id="newemailContainer">
+                    <label for="newemail">Enter Email Address</label><br>
+                    <input type="text" id="newemail" placeholder="Enter Email Address"
+                        style="border: 2px solid #ccc;"><br>
+                </div>
+                <div style="display: flex; align-items: center;
+        justify-content: space-between;">
+                    <button id="send" onclick="sendLink()">Send Link</button>
+                    <button id="cancel" onclick="window.location.replace('./signin.html')">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/signin.js"></script>
+
+</html>

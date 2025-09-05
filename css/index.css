@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    z-index: -1;
+
+}
+
+header>div {
+    display: flex;
+}
+
+header {
+    margin-top: 0px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(228, 187, 123);
+    padding: 10px;
+}
+
+#logoContainer {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 10px;
+}
+
+#logoContainer span {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#logoContainer span a {
+    text-decoration: none;
+}
+
+#logoContainer span a:link,
+#logoContainer span a:visited,
+#logoContainer span a:active {
+    color: black;
+}
+
+
+#navBar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+
+}
+
+#navBar nav a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 15px 3px 15px;
+    color: black;
+    position: relative;
+}
+
+#navBar nav a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s;
+
+}
+
+#navBar nav a:hover {
+    color: black;
+}
+
+#navBar nav a:hover::after {
+    width: 100%;
+
+}
+
+#signup button {
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    padding: 13px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(85, 83, 83);
+}
+
+#signin button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+
+}
+
+#signin button:hover {
+    background-color: black;
+    color: white;
+}
+
+#signup button:hover {
+    background-color: #CCC;
+    color: black;
+}
+
+
+
+#heroSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 0 0 0;
+    gap: 4%;
+    height: 385px;
+    color: black;
+    background-color: rgb(228, 187, 123);
+
+}
+
+#hero1 {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin-left: 15%;
+}
+
+#contactUs {
+    padding: 20px;
+    background-color: rgb(228, 187, 123);
+}
+
+#branches {
+    width: 133px;
+    font-size: 20px;
+    padding: 10px 12px;
+    color: black;
+    border: none;
+    border: 2px solid rgb(228, 187, 123);
+    background: transparent;
+    border-radius: 10px;
+    border-radius: none;
+}
+
+#branches option {
+    width: 150px;
+}
+
+#branches option {
+    background-color: rgb(228, 187, 124);
+    color: black;
+}
+
+
+#campusLife {
+    width: 160px;
+    font-size: 20px;
+    padding: 10px 12px;
+    color: black;
+    border: none;
+    border: 2px solid rgb(228, 187, 123);
+    background: transparent;
+    border-radius: 10px;
+    border-radius: none;
+}
+
+#campusLife option {
+    width: 150px;
+}
+
+#campusLife option {
+    background-color: rgb(228, 187, 124);
+    color: black;
+}
