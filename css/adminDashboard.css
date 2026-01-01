@@ -214,7 +214,7 @@ body {
 .btn-reject {
     background-color: var(--danger-color);
     color: white;
-    margin-left: 0.5rem;
+    
 }
 
 .btn-reject:hover {
@@ -224,6 +224,7 @@ body {
 .btn-view {
     background-color: var(--accent-color);
     color: white;
+    
 }
 
 .btn-view:hover {

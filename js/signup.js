@@ -43,7 +43,7 @@ async function signUpValidation(e) {
     if (isValid) {
         try {
              const isAdmin = adminEmails.some(adminEmail => adminEmail === em);
-            const response = await fetch("https://6823f6a065ba058033986857.mockapi.io/api/job_application/users", {
+            const response = await fetch("https://695649a7b9b81bad7af29e76.mockapi.io/api/users", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

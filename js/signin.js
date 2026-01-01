@@ -27,7 +27,7 @@ async function signInValidation(e) {
 
     if (isValid) {
         try {
-            let response = await fetch("https://6823f6a065ba058033986857.mockapi.io/api/job_application/users");
+            let response = await fetch("https://695649a7b9b81bad7af29e76.mockapi.io/api/users");
             let users = await response.json();
             let user = users.find(u => u.email === em && u.password === ps);
 

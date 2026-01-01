@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function setupEventListeners() {
-
     const navLinks = document.querySelectorAll(".navLink");
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -90,7 +89,7 @@ async function manageDashboard() {
     const myFormsContainer = document.getElementById("myforms");
 
     try {
-        const response = await fetch("https://6823f6a065ba058033986857.mockapi.io/api/job_application/users");
+        const response = await fetch("https://695649a7b9b81bad7af29e76.mockapi.io/api/users");
         const users = await response.json();
 
         const userApplications = users.filter(user =>
@@ -249,7 +248,7 @@ async function showApplication(application) {
             if (!confirmDelete) return;
 
             try {
-                const res = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${application.id}`, {
+                const res = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${application.id}`, {
                     method: "DELETE"
                 });
 
@@ -357,7 +356,7 @@ async function submitAdmission(event) {
 
         if (currentEditId) {
 
-            response = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${currentEditId}`, {
+            response = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${currentEditId}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -374,7 +373,7 @@ async function submitAdmission(event) {
                 createdAt: new Date().toISOString()
             };
 
-            response = await fetch("https://6823f6a065ba058033986857.mockapi.io/api/job_application/users", {
+            response = await fetch("https://695649a7b9b81bad7af29e76.mockapi.io/api/users", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formPayload)
@@ -396,7 +395,7 @@ async function submitAdmission(event) {
 async function fetchApplicationDeadline() {
     try {
 
-        const response = await fetch("https://6823f6a065ba058033986857.mockapi.io/api/job_application/users");
+        const response = await fetch("https://695649a7b9b81bad7af29e76.mockapi.io/api/users");
         if (response.ok) {
             const users = await response.json();
 

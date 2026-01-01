@@ -81,7 +81,7 @@ function setupEventListeners() {
 
 async function loadApplications() {
     try {
-        const response = await fetch('https://6823f6a065ba058033986857.mockapi.io/api/job_application/users');
+        const response = await fetch('https://695649a7b9b81bad7af29e76.mockapi.io/api/users');
 
         if (!response.ok) {
             throw new Error('Failed to fetch applications');
@@ -210,7 +210,7 @@ async function viewApplication(appId) {
         `;
         detailModal.classList.add('active');
 
-        const response = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${appId}`);
+        const response = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${appId}`);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch application: ${response.status}`);
@@ -307,7 +307,6 @@ async function viewApplication(appId) {
           </div>
         `;
 
-        // Set up modal button event listeners
         document.getElementById('modalApprove')?.addEventListener('click', async () => {
             try {
                 document.getElementById('modalApprove').innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
@@ -386,7 +385,7 @@ async function rejectApplication(appId) {
 
 async function updateApplicationStatus(appId, status) {
     try {
-        const response = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${appId}`);
+        const response = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${appId}`);
         if (!response.ok) {
             throw new Error(`Failed to fetch application: ${response.status}`);
         }
@@ -399,7 +398,7 @@ async function updateApplicationStatus(appId, status) {
             statusUpdatedAt: new Date().toISOString()
         };
 
-        const updateResponse = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${appId}`, {
+        const updateResponse = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${appId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -429,7 +428,7 @@ async function loadDeadline() {
         }
 
 
-        const response = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${adminId}`);
+        const response = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${adminId}`);
 
         if (response.ok) {
             const adminData = await response.json();
@@ -449,7 +448,7 @@ async function loadDeadline() {
         currentDeadline.textContent = `Current Deadline: ${defaultDeadline.toLocaleDateString()}`;
 
 
-        await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${adminId}`, {
+        await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${adminId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -477,7 +476,7 @@ async function updateDeadline() {
             throw new Error('Invalid date');
         }
 
-        const response = await fetch(`https://6823f6a065ba058033986857.mockapi.io/api/job_application/users/${adminId}`, {
+        const response = await fetch(`https://695649a7b9b81bad7af29e76.mockapi.io/api/users/${adminId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
